@@ -1,6 +1,16 @@
 #ifndef SHELL_H
 #define SHELL_H
 
+#include <signal.h>
+#include <stdlib.h>
+#include <stdio.h>
+#include <unistd.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <sys/wait.h>
+#include <fcntl.h>
+#include <limits.h>
+#include <errno.h>
 
 #define TKN_BUFFSIZE 128
 #define BUFF_SIZE 1024
@@ -221,15 +231,3 @@ void generate_errmsg(ShellVar *ptr, char *input, int index, int rs_flag);
 
 
 #endif /*SHELL_H*/
-
-#include <signal.h>
-#include <stdlib.h>
-#include <stdio.h>
-#include <unistd.h>
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <sys/wait.h>
-#include <fcntl.h>
-#include <limits.h>
-#include <errno.h>
-
